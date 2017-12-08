@@ -1,0 +1,20 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="test Suite">
+    <listeners>
+        <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+
+    </listeners>
+
+    <test name="LoginTest">
+        <parameter name="browser" value="ChromeDriver"/>
+        <classes>
+            <class name="LoginTest">
+                <methods>
+                    <include name="loginFormPositiveTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
