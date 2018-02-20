@@ -15,7 +15,7 @@ public class LoginTest {
     public void loginFormPositiveTest(){
         WebDriver webDriver = new ChromeDriver();
         webDriver.get ("http://testpage1.denga.pro/");
-        webDriver.findElement(By.id("login")).sendKeys("test@testserver.com");
+        webDriver.findElement(By.id("login_pass")).sendKeys("test@testserver.com");
         webDriver.findElement(By.id("pass")).sendKeys("testtest");
         webDriver.findElement(By.cssSelector("button[type='submit']")).click();
         //тут будем проверять, что мы залогинились, т.е. мы видим страницу с логином
