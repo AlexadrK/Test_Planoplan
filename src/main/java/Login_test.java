@@ -13,10 +13,10 @@ public class Login_test {
     public static void main(String[] args) {
         WebDriver webDriver = new ChromeDriver();
         webDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        webDriver.get ("https://planoplan.com/");
+        webDriver.get ("the website");
         MainPage mainPage = new MainPage(webDriver);
         LoginPage loginPage= mainPage.clickLogin();
-        loginPage.signIn("for_testbox_1@mail.ru","123456");
+        loginPage.signIn("e-mail","password");
         webDriver.findElement(By.linkText("Редактирование")).click();
     }
 }
